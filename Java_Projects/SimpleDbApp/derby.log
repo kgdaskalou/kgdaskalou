@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Tue Oct 17 12:44:19 EEST 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-018b-3d05-9b45-00000683c430 
+on database directory C:\Users\DaskalouK\Documents\Java_Projects\SimpleDbApp\derbyDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@51521cc1 
+Loaded from file:/C:/Users/DaskalouK/Documents/JavaLibraries/derby-10.16.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=20.0.2+9-78
+user.dir=C:\Users\DaskalouK\Documents\Java_Projects\SimpleDbApp
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Oct 17 12:44:20 EEST 2023: Shutting down Derby engine
+----------------------------------------------------------------
+Tue Oct 17 12:44:20 EEST 2023:
+Shutting down instance a816c00e-018b-3d05-9b45-00000683c430 on database directory C:\Users\DaskalouK\Documents\Java_Projects\SimpleDbApp\derbyDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@51521cc1 
+----------------------------------------------------------------
