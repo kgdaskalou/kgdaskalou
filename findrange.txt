@@ -1,0 +1,3 @@
+Function findrange(tb As String, tbl As String, word As String) As Range
+    Set findrange = Sheets(tb).Range(tbl).Find(word, LookIn:=xlValues)
+End Function

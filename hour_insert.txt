@@ -1,0 +1,75 @@
+Sub hours()
+    Dim counter As Long
+    Dim x As Long
+    Dim b As Long
+    Dim sum_hour As Long
+    Dim start As Long
+    Dim i As Range
+    Dim hradd As Range
+    With Sheets("tab1")
+        Set i = findrange("tab1", "class", "Áñãßá")
+        If Not i Is Nothing Then
+            Set hradd = i.Offset(, 1)
+            counter = hradd.Value + 2
+                Range("class[[#All],[ÐÌ]]").Select
+                ActiveWorkbook.Worksheets("tab1").ListObjects("class").Sort.SortFields.Clear
+                ActiveWorkbook.Worksheets("tab1").ListObjects("class").Sort.SortFields.Add2 _
+                Key:=Range("class[[#All],[ÐÌ]]"), SortOn:=xlSortOnValues, Order:= _
+                xlDescending, DataOption:=xlSortNormal
+                With ActiveWorkbook.Worksheets("tab1").ListObjects("class").Sort
+                    .Header = xlYes
+                    .MatchCase = False
+                    .Orientation = xlTopToBottom
+                    .SortMethod = xlPinYin
+                    .Apply
+                End With
+            
+            x = Range("class[[#All],[ÐÌ]]").Column
+            For c = 2 To counter
+                If Cells(c, x - 1) <> "ÓùìáôéêÞ ÁãùãÞ" Then
+                    Cells(c, x + 2) = Cells(c, x).Value - 1
+                    Cells(c, x + 3) = Cells(c, x + 1).Value
+                    sum_hours = WorksheetFunction.Sum(Sheets("tab1").Range("class[ÐÌ2]"))
+                    Range("j6") = sum_hours
+                Else
+                    Cells(c, x + 2) = Cells(c, x).Value
+                    Cells(c, x + 3) = Cells(c, x + 1).Value
+                    counter = counter + 1
+                    sum_hours = WorksheetFunction.Sum(Sheets("tab1").Range("class[ÐÌ2]"))
+                    Range("j6") = sum_hours
+                End If
+            Next c
+            b = c
+            For c = b To Sheets("tab1").Range("class[Á/Á]").Rows.Count + 1
+                Cells(c, x + 2) = Cells(c, x).Value
+                Cells(c, x + 3) = Cells(c, x + 1).Value
+            Next c
+        End If
+    End With
+    sum_hours = WorksheetFunction.Sum(Sheets("tab1").Range("class[ÐÌ2]"))
+        Range("j6") = sum_hours
+    Range("class[[#All],[Á/Á]]").Select
+    ActiveWorkbook.Worksheets("tab1").ListObjects("class").Sort.SortFields.Clear
+    ActiveWorkbook.Worksheets("tab1").ListObjects("class").Sort.SortFields.Add2 _
+        Key:=Range("class[[#All],[Á/Á]]"), SortOn:=xlSortOnValues, Order:= _
+        xlAscending, DataOption:=xlSortNormal
+    With ActiveWorkbook.Worksheets("tab1").ListObjects("class").Sort
+        .Header = xlYes
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+    Application.Goto Reference:="class"
+    Range("class[[#All]]").Select
+    With Selection
+        .VerticalAlignment = xlCenter
+        .WrapText = True
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+End Sub
