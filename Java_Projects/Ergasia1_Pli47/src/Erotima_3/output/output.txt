@@ -1,0 +1,11 @@
+        http://www.gutenberg.org/9/98/ 2Cities.txt at line number: 15918
+     http://www.gutenberg.org 2Cities.txt at line number: 16267
+        http://www.gutenberg.org/1/6/3/2/16328/ Beowulf.txt at line number: 6648
+        http://www.gutenberg.org/3/4/345/ Dracula.txt at line number: 15615
+     http://www.gutenberg.org Dracula.txt at line number: 15968
+        http://www.gutenberg.org/8/84/ Frankenstein.txt at line number: 7463
+http://www.gutenberg.org/2/7/0/2701/ Moby.txt at line number: 21975
+  http://www.gutenberg.org Moby.txt at line number: 22321
+        http://www.gutenberg.org/1/6/9/6/16960/ SherlockHolmes.txt at line number: 29564
+        http://www.gutenberg.org/1/7/9/2/17921/ SherlockHolmes.txt at line number: 53908
+     http://www.gutenberg.org SherlockHolmes.txt at line number: 54256
